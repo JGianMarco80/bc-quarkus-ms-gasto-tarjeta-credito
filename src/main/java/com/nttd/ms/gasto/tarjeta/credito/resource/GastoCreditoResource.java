@@ -33,4 +33,13 @@ public class GastoCreditoResource {
     public void save(GastoCredito gastoCredito){
         gastoCreditoService.save(gastoCredito);
     }
+
+    @PUT
+    @Path("/pago-cuota")
+    @Transactional
+    public void savePagoCuota(@QueryParam("numeroCredito") String numeroCredito,
+                              @QueryParam("cuota") Integer cuota,
+                              @QueryParam("monto") Double monto){
+        gastoCreditoService.savePagoCuota(numeroCredito, cuota, monto);
+    }
 }

@@ -12,4 +12,6 @@ public interface GastoCreditoService {
 
     void save(GastoCredito gastoCredito);
 
+    void savePagoCuota(String numeroCredito, Integer cuota, Double monto);
+
 }
